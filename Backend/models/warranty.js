@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-
+const array = []
 const warrSchema = {
   warrId: String,
   warrName: String,

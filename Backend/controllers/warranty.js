@@ -18,6 +18,8 @@ exports.handleSubmit = (req, res) => {
   } else {
     resolve = "Refund";
   }
+
+
   var type = Number(req.body.type);
   var restype;
   if (type == 1) {

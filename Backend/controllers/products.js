@@ -105,8 +105,21 @@ const displayProduct = async (req, res) => {
   }
 };
 
+const get_all_products = async (req, res) => {
+  Product.find()
+    .sort({ createdAt: -1 })
+    .limit(100)
+    .then((result) => {
+      res.json(result);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+};
+
 module.exports = {
   renderProduct,
   handleProductsubmit,
   displayProduct,
+  get_all_products,
 };
